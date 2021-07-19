@@ -1,0 +1,64 @@
+2021-07-18 17:22:27.612 +03:00 [INF] Starting up the API...
+2021-07-18 17:22:32.214 +03:00 [INF] Now listening on: https://localhost:5001
+2021-07-18 17:22:32.220 +03:00 [INF] Now listening on: http://localhost:5000
+2021-07-18 17:22:32.221 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-07-18 17:22:32.221 +03:00 [INF] Hosting environment: Development
+2021-07-18 17:22:32.221 +03:00 [INF] Content root path: D:\Projects\Campton\Campton
+2021-07-18 17:26:49.909 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/users/Registration application/json 82
+2021-07-18 17:26:50.224 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2021-07-18 17:26:50.225 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2021-07-18 17:26:50.298 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:5001/users/Registration application/json 82 - 405 0 - 417.5502ms
+2021-07-18 17:27:09.945 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/users/Registration application/json 82
+2021-07-18 17:27:09.959 +03:00 [INF] Executing endpoint 'Campton.Controllers.UsersController.Registration (Campton)'
+2021-07-18 17:27:10.150 +03:00 [INF] Route matched with {action = "Registration", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Registration(Campton.Commands.RegistrationCommand) on controller Campton.Controllers.UsersController (Campton).
+2021-07-18 17:27:14.031 +03:00 [INF] Entity Framework Core 5.0.8 initialized 'Context' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.11-mysql 
+2021-07-18 17:27:14.988 +03:00 [INF] Executed DbCommand (254ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'camp'
+2021-07-18 17:27:15.314 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2021-07-18 17:27:15.433 +03:00 [INF] Executed action Campton.Controllers.UsersController.Registration (Campton) in 5273.7154ms
+2021-07-18 17:27:15.433 +03:00 [INF] Executed endpoint 'Campton.Controllers.UsersController.Registration (Campton)'
+2021-07-18 17:27:15.466 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/users/Registration application/json 82 - 400 - application/problem+json;+charset=utf-8 5521.1171ms
+2021-07-18 17:27:23.482 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/users/Registration application/json 81
+2021-07-18 17:27:23.483 +03:00 [INF] Executing endpoint 'Campton.Controllers.UsersController.Registration (Campton)'
+2021-07-18 17:27:23.484 +03:00 [INF] Route matched with {action = "Registration", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Registration(Campton.Commands.RegistrationCommand) on controller Campton.Controllers.UsersController (Campton).
+2021-07-18 17:27:23.487 +03:00 [INF] Entity Framework Core 5.0.8 initialized 'Context' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.11-mysql 
+2021-07-18 17:27:23.581 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'camp'
+2021-07-18 17:27:24.720 +03:00 [INF] Executed DbCommand (133ms) [Parameters=[@__command_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Deleted`, `u`.`Email`, `u`.`Hash`, `u`.`LastLoginAt`, `u`.`Name`, `u`.`Password`, `u`.`RecoveryCode`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__command_Email_0
+LIMIT 1
+2021-07-18 17:27:24.878 +03:00 [WRN] This email is already exists.
+2021-07-18 17:27:24.879 +03:00 [INF] Executing ObjectResult, writing value of type 'Campton.Commands.MessageResponse'.
+2021-07-18 17:27:24.908 +03:00 [INF] Executed action Campton.Controllers.UsersController.Registration (Campton) in 1423.3704ms
+2021-07-18 17:27:24.908 +03:00 [INF] Executed endpoint 'Campton.Controllers.UsersController.Registration (Campton)'
+2021-07-18 17:27:24.909 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/users/Registration application/json 81 - 500 - application/json;+charset=utf-8 1426.4739ms
+2021-07-18 17:27:30.628 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/users/Registration application/json 82
+2021-07-18 17:27:30.628 +03:00 [INF] Executing endpoint 'Campton.Controllers.UsersController.Registration (Campton)'
+2021-07-18 17:27:30.628 +03:00 [INF] Route matched with {action = "Registration", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Registration(Campton.Commands.RegistrationCommand) on controller Campton.Controllers.UsersController (Campton).
+2021-07-18 17:27:30.688 +03:00 [INF] Entity Framework Core 5.0.8 initialized 'Context' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 8.0.11-mysql 
+2021-07-18 17:27:30.708 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'camp'
+2021-07-18 17:27:30.716 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__command_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`CreatedAt`, `u`.`Deleted`, `u`.`Email`, `u`.`Hash`, `u`.`LastLoginAt`, `u`.`Name`, `u`.`Password`, `u`.`RecoveryCode`
+FROM `Users` AS `u`
+WHERE `u`.`Email` = @__command_Email_0
+LIMIT 1
+2021-07-18 17:27:31.132 +03:00 [INF] Executed DbCommand (125ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = Boolean), @p2='?' (Size = 100), @p3='?' (Size = 100), @p4='?' (DbType = Int64), @p5='?' (Size = 100), @p6='?' (Size = 256), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO `Users` (`CreatedAt`, `Deleted`, `Email`, `Hash`, `LastLoginAt`, `Name`, `Password`, `RecoveryCode`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2021-07-18 17:27:31.348 +03:00 [INF] Create new user, id ->5
+2021-07-18 17:27:31.349 +03:00 [INF] Executing OkObjectResult, writing value of type 'Campton.Commands.SuccessResponse'.
+2021-07-18 17:27:31.350 +03:00 [INF] Executed action Campton.Controllers.UsersController.Registration (Campton) in 722.0992ms
+2021-07-18 17:27:31.351 +03:00 [INF] Executed endpoint 'Campton.Controllers.UsersController.Registration (Campton)'
+2021-07-18 17:27:31.351 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:5001/users/Registration application/json 82 - 200 - application/json;+charset=utf-8 723.3042ms
